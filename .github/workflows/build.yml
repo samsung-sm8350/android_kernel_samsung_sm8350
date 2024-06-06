@@ -46,14 +46,14 @@ jobs:
           source ./build_script.sh ${{ matrix.target }}
           cp ./AnyKernel3/AQUA* ./
 
-      - name: Clean Kernel Source
-        run: |
-          make mrproper ARCH=arm64 LLVM=1
-
-      - name: Build Kernel With KSU
-        run: |
-          source ./build_script.sh ${{ matrix.target }} --ksu
-          cp ./AnyKernel3/AQUA* ./
+#      - name: Clean Kernel Source
+#        run: |
+#          make mrproper ARCH=arm64 LLVM=1
+# 
+#      - name: Build Kernel With KSU
+#       run: |
+#         source ./build_script.sh ${{ matrix.target }} --ksu
+#         cp ./AnyKernel3/AQUA* ./
 
       - name: Format Date
         id: format_date
