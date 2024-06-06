@@ -596,7 +596,8 @@ struct mmc_host {
 	/* Host Software Queue support */
 	bool			hsq_enabled;
 #if defined(CONFIG_SDC_QTI)
-	bool			need_hw_reset;
+	bool                    need_hw_reset;
+	bool			partial_init_broken;
 #endif
 
 #if defined(CONFIG_SDC_QTI)
